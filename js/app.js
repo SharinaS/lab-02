@@ -20,5 +20,15 @@ if (spaceNeedle === 'no' || spaceNeedle === 'n') {
 }
 console.log('Answer 2: No, Sharina has not visited the top of the Space Needle.');
 
+// Question 3: Australia
+var visitAustralia = prompt('Question 3: Would you guess that Sharina has been to Australia?');
+visitAustralia = visitAustralia.toLowerCase();
+if (visitAustralia === 'yes' || visitAustralia === 'y') {
+  alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
+} else {
+  alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
+}
+console.log('Answer 3: Yes, Sharina has been to Australia');
+
 
 // When each yes is chosen, add 1 to a counter array. At end, check length of counter array and report points as document.write()
