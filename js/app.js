@@ -5,7 +5,7 @@
 var points = 0;
 
 // Question 1: Siblings
-var siblings = prompt('Do you think Sharina have siblings?');
+var siblings = prompt('Do you think Sharina has siblings?');
 siblings = siblings.toLowerCase();
 if (siblings === 'yes' || siblings === 'y') {
   alert('Oooh, that\'s correct! Sharina has a sister!');
@@ -67,7 +67,7 @@ if (points > 3) {
 } else if (points < 2) {
   totalScore.textContent = 'It was a valiant try. You guessed '+ points + ' out of 5 questions correctly.';
 } else {
-  totalScore.textContent = 'Not too shabby! You guessed ' + points + ' out of 5 questions correctly!';
+  totalScore.textContent = 'Nice job! You guessed ' + points + ' out of 5 questions correctly!';
 }
 
 
