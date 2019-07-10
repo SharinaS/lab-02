@@ -27,7 +27,7 @@ if (spaceNeedle === 'no' || spaceNeedle === 'n') {
 console.log('Answer 2: No, Sharina has not visited the top of the Space Needle.');
 
 // Question 3: Australia
-var visitAustralia = prompt('Question 3: Would you guess that Sharina has been to Australia?');
+var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
 visitAustralia = visitAustralia.toLowerCase();
 if (visitAustralia === 'yes' || visitAustralia === 'y') {
   alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
@@ -62,7 +62,7 @@ console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
 
 // Score Card
 var totalScore = document.getElementById('score');
-if (points > 4) {
+if (points > 3) {
   totalScore.textContent = 'Rock Star! You guessed ' + points + ' out of 5 questions correctly!';
 } else if (points < 2) {
   totalScore.textContent = 'It was a valiant try. You guessed '+ points + ' out of 5 questions correctly.';
