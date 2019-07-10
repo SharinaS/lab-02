@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 
 var points = 0;
 
@@ -70,4 +70,4 @@ if (points > 4) {
   totalScore.textContent = 'Not too shabby! You guessed ' + points + ' out of 5 questions correctly!';
 }
 
-*/
+
