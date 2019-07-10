@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 var points = 0;
 
 // Question 1: Siblings
@@ -59,6 +57,25 @@ if (caribbean === 'yes' || caribbean === 'y') {
 }
 console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
 
+// Question 6: Sailing to Hawaii with numeric input with 4 tries
+var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 5 guesses!'));
+var responseAttempts = 0;
+
+while (responseAttempts < 5){
+  if (hawaiiSailing === 2) {
+    alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
+    points += 1;
+    break;
+  } else if (hawaiiSailing < 2) {
+    alert('Try a little higher');
+    responseAttempts += 1;
+  } else {
+    alert('Try a little lower');
+    responseAttempts += 1;
+  }
+}
+
+
 
 // Score Card
 var totalScore = document.getElementById('score');
@@ -67,7 +84,7 @@ if (points > 3) {
 } else if (points < 2) {
   totalScore.textContent = 'It was a valiant try. You guessed '+ points + ' out of 5 questions correctly.';
 } else {
-  totalScore.textContent = 'Nice job! You guessed ' + points + ' out of 5 questions correctly!';
+  totalScore.textContent = 'Nice job! You guessed ' + points + ' out of 6 questions correctly!';
 }
 
 
