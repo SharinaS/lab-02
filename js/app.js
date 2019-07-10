@@ -78,7 +78,25 @@ while (responseAttempts < 5){
   }
 }
 
+// Question 7: Multiple correct answers to states I've lived in
+var statesLived = ['Massachussets', 'MA', 'New York', 'NY', 'California', 'CA', 'Minnesota', 'MN'];
+var guessNum = 0;
+var i = 0;
 
+for (i = 0; i < statesLived.length; i++) {
+  var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
+
+  if (guessNum === 7) {
+    alert('It was a valiant attempt... but Sharina has lived in Massachussets, New York, California, and Minnesota');
+  } else {
+    if (statesLived[i] === stateGuess) {
+      alert('Yeah! Sharina has lived in Massachussets, New York, California, and Minnesota');
+    } else {
+      alert('Nice try!');
+      guessNum += 1;
+    }
+  }
+}
 
 
 
