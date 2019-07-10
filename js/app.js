@@ -1,5 +1,7 @@
 'use strict';
 
+/*
+
 var points = 0;
 
 // Question 1: Siblings
@@ -57,18 +59,8 @@ if (caribbean === 'yes' || caribbean === 'y') {
 }
 console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
 
-/*
-// Score Card
-var totalScore = document.getElementById('score');
-if (totalScore > 4) {
-  totalScore.textContent = 'Rock Star! You guessed ' + points + ' out of 5 questions correctly!';
-} else if (totalScore < 2) {
-  totalScore.textContent = 'It was a valiant try. You guessed '+ points + ' out of 5 questions correctly.';
-} else {
-  totalScore.textContent = 'Not too shabby! You guessed ' + points + ' out of 5 questions correctly!';
-}
-*/
 
+// Score Card
 var totalScore = document.getElementById('score');
 if (points > 4) {
   totalScore.textContent = 'Rock Star! You guessed ' + points + ' out of 5 questions correctly!';
@@ -77,3 +69,5 @@ if (points > 4) {
 } else {
   totalScore.textContent = 'Not too shabby! You guessed ' + points + ' out of 5 questions correctly!';
 }
+
+*/
