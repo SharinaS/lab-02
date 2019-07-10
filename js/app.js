@@ -58,11 +58,11 @@ if (caribbean === 'yes' || caribbean === 'y') {
 console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
 
 // Question 6: Sailing to Hawaii with numeric input with 4 tries
-
 var responseAttempts = 0;
 
 while (responseAttempts < 5){
   var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 5 guesses!'));
+
   if (hawaiiSailing === 2) {
     alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
     points += 1;
@@ -70,11 +70,15 @@ while (responseAttempts < 5){
   } else if (hawaiiSailing < 2) {
     alert('Try a little higher');
     responseAttempts += 1;
-  } else {
+  } else if (hawaiiSailing > 2) {
     alert('Try a little lower');
     responseAttempts += 1;
+  } else {
+    alert('Please re-try with a number.');
   }
 }
+
+
 
 
 
