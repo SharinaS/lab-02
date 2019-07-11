@@ -2,7 +2,7 @@
 
 var points = 0;
 var userName;
-
+var questions = [', Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
 // Request for name
 function nameRequest() {
   userName = prompt('What is your first name?');
@@ -12,7 +12,7 @@ function nameRequest() {
 
 // Question 1: Siblings
 function siblingQuestion() {
-  var siblings = prompt(userName + ', Do you think Sharina has siblings?');
+  var siblings = prompt(userName + questions[0]);
   siblings = siblings.toLowerCase();
   if (siblings === 'yes' || siblings === 'y') {
     alert('Oooh, that\'s correct! Sharina has a sister!');
@@ -28,7 +28,7 @@ function siblingQuestion() {
 
 // Question 2: Space Needle
 function spaceNeedleQuestion() {
-  var spaceNeedle = prompt('Do you think Sharina visited the top of the Space Needle?');
+  var spaceNeedle = prompt(questions[1]);
   spaceNeedle = spaceNeedle.toLowerCase();
   if (spaceNeedle === 'no' || spaceNeedle === 'n') {
     alert('Great guess! You are absolutely correct: Sharina has never been to the top of the Space Needle.');
@@ -44,7 +44,7 @@ function spaceNeedleQuestion() {
 
 // Question 3: Australia
 function australiaQuestion() {
-  var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
+  var visitAustralia = prompt(questions[2]);
   visitAustralia = visitAustralia.toLowerCase();
   if (visitAustralia === 'yes' || visitAustralia === 'y') {
     alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
@@ -59,7 +59,7 @@ function australiaQuestion() {
 
 // Question 4: Music Major
 function collegeDegree() {
-  var musicMajor = prompt('Do you think Sharina was a music major in undergrad?');
+  var musicMajor = prompt(questions[3]);
   musicMajor = musicMajor.toLowerCase();
   if (musicMajor === 'yes' || musicMajor === 'y') {
     alert('Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music');
@@ -74,7 +74,7 @@ function collegeDegree() {
 
 // Question 5: Caribbean Life
 function caribbeanQuestion() {
-  var caribbean = prompt('Do you think Sharina has lived in the Caribbean?');
+  var caribbean = prompt(questions[4]);
   caribbean = caribbean.toLowerCase();
   if (caribbean === 'yes' || caribbean === 'y') {
     alert('Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!');
