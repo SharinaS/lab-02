@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: auto;
     width: 40%;
-    padding: 30px;
+    padding: 0px;
     margin-top: 10%;
 }
 
@@ -20,7 +20,7 @@ h1 {
 
 h2 {
     color: rgb(230, 250, 255);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 30px;
     letter-spacing: 3px;
 }
@@ -44,3 +44,4 @@ article {
     border: 2px dotted goldenrod;
 
 }
+

@@ -2,16 +2,20 @@
 
 var points = 0;
 
+// Request for name
+var userName = prompt('What is your first name?');
+alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
+
 // Question 1: Siblings
-var siblings = prompt('Do you think Sharina has siblings?');
+var siblings = prompt(userName + ', Do you think Sharina has siblings?');
 siblings = siblings.toLowerCase();
 if (siblings === 'yes' || siblings === 'y') {
   alert('Oooh, that\'s correct! Sharina has a sister!');
   points += 1;
 } else {
-  alert('Awww, nice try. Sharina actually does have siblings');
+  alert('Awww, nice try, ' + userName + ' Sharina actually does have siblings');
 }
-console.log('Answer 1: Yes, Sharina has siblings');
+console.log('Answer 1, var siblings, Yes, Sharina has siblings');
 
 // Question 2: Space Needle
 var spaceNeedle = prompt('Do you think Sharina visited the top of the Space Needle?');
@@ -22,7 +26,7 @@ if (spaceNeedle === 'no' || spaceNeedle === 'n') {
 } else {
   alert('Weirdly enough, Sharina has actual never been to the top of the Space Needle. Keep trying!');
 }
-console.log('Answer 2: No, Sharina has not visited the top of the Space Needle.');
+console.log('Answer 2, var spaceNeedle, No, Sharina has not visited the top of the Space Needle.');
 
 // Question 3: Australia
 var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
@@ -33,7 +37,7 @@ if (visitAustralia === 'yes' || visitAustralia === 'y') {
 } else {
   alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
 }
-console.log('Answer 3: Yes, Sharina has been to Australia');
+console.log('Answer 3, var visitAustralia, Yes, Sharina has been to Australia');
 
 // Question 4: Music Major
 var musicMajor = prompt('Do you think Sharina was a music major in undergrad?');
@@ -44,7 +48,7 @@ if (musicMajor === 'yes' || musicMajor === 'y') {
 } else {
   alert('Whoops, that\'s not correct! Sharina really was a music major!');
 }
-console.log('Answer 4: Yes, Sharina was a music major');
+console.log('Answer 4, var musicMajor, Yes, Sharina was a music major');
 
 
 // Question 5: Caribbean Life
@@ -56,7 +60,7 @@ if (caribbean === 'yes' || caribbean === 'y') {
 } else {
   alert('Oh sad, you missed that one. Sharina did call the Caribbean home for a while.');
 }
-console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
+console.log('Answer 5, var caribbean, Yes, Sharina lived in the Caribbean.');
 
 
 // Question 6: Sailing to Hawaii with numeric input with 4 tries
@@ -66,28 +70,25 @@ while (responseAttempts <= 5){
   var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 4 guesses!'));
 
   if (hawaiiSailing === 2) {
-    console.log('In the correct answer');
     alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
     points += 1;
     responseAttempts += 1;
     break;
   } else if (hawaiiSailing < 2) {
     alert('Try a little higher');
-    console.log('too low');
     responseAttempts += 1;
   } else if (hawaiiSailing > 2) {
     alert('Try a little lower');
-    console.log('too high');
     responseAttempts += 1;
   } else {
-    console.log('words answered');
     alert('Please re-try with a number.');
   }
 }
-console.log('Answer 6: Sharina sailed from Canada to Hawaii twice');
+console.log('Answer 6, var hawaiiSailing, Sharina sailed from Canada to Hawaii twice');
 
-
+/*
 // Question 7: Multiple correct answers to states I've lived in
+// May have a bug in this loop
 var statesLived = ['Massachussets', 'MA', 'New York', 'NY', 'California', 'CA', 'Minnesota', 'MN'];
 var guessNum = 0;
 var i = 0;
@@ -112,19 +113,20 @@ for (i = 0; i < statesLived.length; i++) {
   }
 }
 console.log('Answer 7: Sharina has lived in Massachussets, New York, California, and Minnesota');
-
-
+*/
 
 //Score Card
 var totalScore = document.getElementById('score');
 var maxPoints = ' out of 7 questions correctly!';
 
 if (points > 3) {
-  totalScore.textContent = 'Rock Star! You guessed ' + points + maxPoints;
+  totalScore.textContent = 'You\'re a Rock Star, ' + userName + '! You guessed ' + points + maxPoints;
 } else if (points < 2) {
-  totalScore.textContent = 'It was a valiant try. You guessed '+ points + maxPoints;
+  totalScore.textContent = 'It was a valiant try, ' + userName + '. You guessed '+ points + maxPoints;
 } else {
-  totalScore.textContent = 'Nice job! You guessed ' + points + maxPoints;
+  totalScore.textContent = 'Nice job' + userName + '! You guessed ' + points + maxPoints;
 }
+
+
 
 
