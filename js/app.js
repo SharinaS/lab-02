@@ -46,6 +46,7 @@ if (musicMajor === 'yes' || musicMajor === 'y') {
 }
 console.log('Answer 4: Yes, Sharina was a music major');
 
+
 // Question 5: Caribbean Life
 var caribbean = prompt('Do you think Sharina has lived in the Caribbean?');
 caribbean= caribbean.toLowerCase();
@@ -57,26 +58,34 @@ if (caribbean === 'yes' || caribbean === 'y') {
 }
 console.log('Answer 5: Yes, Sharina lived in the Caribbean.');
 
+
 // Question 6: Sailing to Hawaii with numeric input with 4 tries
 var responseAttempts = 0;
 
-while (responseAttempts < 5){
-  var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 5 guesses!'));
+while (responseAttempts <= 5){
+  var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 4 guesses!'));
 
   if (hawaiiSailing === 2) {
+    console.log('In the correct answer');
     alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
     points += 1;
+    responseAttempts += 1;
     break;
   } else if (hawaiiSailing < 2) {
     alert('Try a little higher');
+    console.log('too low');
     responseAttempts += 1;
   } else if (hawaiiSailing > 2) {
     alert('Try a little lower');
+    console.log('too high');
     responseAttempts += 1;
   } else {
+    console.log('words answered');
     alert('Please re-try with a number.');
   }
 }
+console.log('Answer 6: Sharina sailed from Canada to Hawaii twice');
+
 
 // Question 7: Multiple correct answers to states I've lived in
 var statesLived = ['Massachussets', 'MA', 'New York', 'NY', 'California', 'CA', 'Minnesota', 'MN'];
@@ -85,24 +94,31 @@ var i = 0;
 
 for (i = 0; i < statesLived.length; i++) {
   var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
+  //stateGuess = stateGuess.toLowerCase();
 
   if (guessNum === 7) {
     alert('It was a valiant attempt... but Sharina has lived in Massachussets, New York, California, and Minnesota');
+    console.log('more than 6 guesses');
   } else {
     if (statesLived[i] === stateGuess) {
+      console.log('correct guess');
       alert('Yeah! Sharina has lived in Massachussets, New York, California, and Minnesota');
+      points += 1;
     } else {
-      alert('Nice try!');
+      console.log('failed guess');
+      alert('Nice try! Check your spelling or try again!');
       guessNum += 1;
     }
   }
 }
+console.log('Answer 7: Sharina has lived in Massachussets, New York, California, and Minnesota');
 
 
 
-// Score Card
+//Score Card
 var totalScore = document.getElementById('score');
-var maxPoints = ' out of 6 questions correctly!';
+var maxPoints = ' out of 7 questions correctly!';
+
 if (points > 3) {
   totalScore.textContent = 'Rock Star! You guessed ' + points + maxPoints;
 } else if (points < 2) {
