@@ -40,28 +40,32 @@ function spaceNeedleQuestion() {
 
 
 // Question 3: Australia
-var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
-visitAustralia = visitAustralia.toLowerCase();
-if (visitAustralia === 'yes' || visitAustralia === 'y') {
-  alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
-  points++;
-  console.log('Answer 3, var visitAustralia, Yes, Sharina has been to Australia');
-} else {
-  alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
-  console.log('user guessed incorrectly', visitAustralia);
+function australiaQuestion() {
+  var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
+  visitAustralia = visitAustralia.toLowerCase();
+  if (visitAustralia === 'yes' || visitAustralia === 'y') {
+    alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
+    points++;
+    console.log('Answer 3, var visitAustralia, Yes, Sharina has been to Australia');
+  } else {
+    alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
+    console.log('user guessed incorrectly', visitAustralia);
+  }
 }
 
 
 // Question 4: Music Major
-var musicMajor = prompt('Do you think Sharina was a music major in undergrad?');
-musicMajor = musicMajor.toLowerCase();
-if (musicMajor === 'yes' || musicMajor === 'y') {
-  alert('Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music');
-  points++;
-  console.log('Answer 4, var musicMajor, Yes, Sharina was a music major');
-} else {
-  alert('Whoops, that\'s not correct! Sharina really was a music major!');
-  console.log('user guessed incorrectly', musicMajor);
+function collegeDegree() {
+  var musicMajor = prompt('Do you think Sharina was a music major in undergrad?');
+  musicMajor = musicMajor.toLowerCase();
+  if (musicMajor === 'yes' || musicMajor === 'y') {
+    alert('Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music');
+    points++;
+    console.log('Answer 4, var musicMajor, Yes, Sharina was a music major');
+  } else {
+    alert('Whoops, that\'s not correct! Sharina really was a music major!');
+    console.log('user guessed incorrectly', musicMajor);
+  }
 }
 
 
@@ -146,3 +150,5 @@ if (points > 3) {
 
 siblingQuestion();
 spaceNeedleQuestion();
+australiaQuestion();
+collegeDegree();
