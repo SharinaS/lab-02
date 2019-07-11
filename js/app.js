@@ -2,87 +2,35 @@
 
 var points = 0;
 var userName;
-var questions = [', Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
+
 // Request for name
 function nameRequest() {
   userName = prompt('What is your first name?');
   alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
 }
 
-
-// Question 1: Siblings
-function siblingQuestion() {
-  var siblings = prompt(userName + questions[0]);
-  siblings = siblings.toLowerCase();
-  if (siblings === 'yes' || siblings === 'y') {
-    alert('Oooh, that\'s correct! Sharina has a sister!');
-    points++;
-  } else {
-    alert('Awww, nice try, ' + userName + ' Sharina actually does have siblings');
-  }
-  console.log('Answer 1, var siblings, Yes, Sharina has siblings');
-}
+var questions = ['Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
 
 
+var yesResponses = ['Oooh, that\'s correct! Sharina has a sister!', 'Weirdly enough, Sharina has actual never been to the top of the Space Needle. Keep trying!', 'Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!', 'Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music', 'Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!'];
 
 
-// Question 2: Space Needle
-function spaceNeedleQuestion() {
-  var spaceNeedle = prompt(questions[1]);
-  spaceNeedle = spaceNeedle.toLowerCase();
-  if (spaceNeedle === 'no' || spaceNeedle === 'n') {
-    alert('Great guess! You are absolutely correct: Sharina has never been to the top of the Space Needle.');
-    points++;
-    console.log('Answer 2, var spaceNeedle, No, Sharina has not visited the top of the Space Needle.');
-  } else {
-    alert('Weirdly enough, Sharina has actual never been to the top of the Space Needle. Keep trying!');
-    console.log('the user guessed incorrectly', spaceNeedle);
-  }
-}
-
-
-
-// Question 3: Australia
-function australiaQuestion() {
-  var visitAustralia = prompt(questions[2]);
-  visitAustralia = visitAustralia.toLowerCase();
-  if (visitAustralia === 'yes' || visitAustralia === 'y') {
-    alert('Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!');
-    points++;
-    console.log('Answer 3, var visitAustralia, Yes, Sharina has been to Australia');
-  } else {
-    alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
-    console.log('user guessed incorrectly', visitAustralia);
-  }
-}
-
-
-// Question 4: Music Major
-function collegeDegree() {
-  var musicMajor = prompt(questions[3]);
-  musicMajor = musicMajor.toLowerCase();
-  if (musicMajor === 'yes' || musicMajor === 'y') {
-    alert('Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music');
-    points++;
-    console.log('Answer 4, var musicMajor, Yes, Sharina was a music major');
-  } else {
-    alert('Whoops, that\'s not correct! Sharina really was a music major!');
-    console.log('user guessed incorrectly', musicMajor);
-  }
-}
-
-
-// Question 5: Caribbean Life
-function caribbeanQuestion() {
-  var caribbean = prompt(questions[4]);
-  caribbean = caribbean.toLowerCase();
-  if (caribbean === 'yes' || caribbean === 'y') {
-    alert('Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!');
-    points++;
-    console.log('Answer 5, var caribbean, Yes, Sharina lived in the Caribbean ' + caribbean);
-  } else {
-    alert('Oh sad, you missed that one. Sharina did call the Caribbean home for a while.');
-    console.log('user guessed incorrectly', caribbean);
+function findAnswers() {
+  for (var i = 0; i < questions.length; i++) {
+    var userInput = prompt(questions[i]);
+    if (i === 1) {
+      if (userInput === 'no' || userInput === 'n') {
+        alert(yesResponses[1]);
+        points++;
+      } else {
+        alert('Wrong Answer!');
+      }
+    } else if (userInput === 'yes' || userInput === 'y') {
+      alert(yesResponses[i]);
+      points++;
+    } else {
+      alert('Wrong Answer!');
+    }
   }
 }
 
@@ -158,11 +106,7 @@ function scoreCard() {
 }
 
 nameRequest();
-siblingQuestion();
-spaceNeedleQuestion();
-australiaQuestion();
-collegeDegree();
-caribbeanQuestion();
+findAnswers();
 sailingTimes();
 homeStates();
 scoreCard();
