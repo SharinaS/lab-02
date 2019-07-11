@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 var points = 0;
 
 // Request for name
@@ -86,16 +88,17 @@ while (responseAttempts <= 5){
 }
 console.log('Answer 6, var hawaiiSailing, Sharina sailed from Canada to Hawaii twice');
 
-/*
+
 // Question 7: Multiple correct answers to states I've lived in
-// May have a bug in this loop
-var statesLived = ['Massachussets', 'MA', 'New York', 'NY', 'California', 'CA', 'Minnesota', 'MN'];
+
+/*
+var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
 var guessNum = 0;
 var i = 0;
 
 for (i = 0; i < statesLived.length; i++) {
   var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
-  //stateGuess = stateGuess.toLowerCase();
+  stateGuess = stateGuess.toLowerCase();
 
   if (guessNum === 7) {
     alert('It was a valiant attempt... but Sharina has lived in Massachussets, New York, California, and Minnesota');
@@ -112,8 +115,35 @@ for (i = 0; i < statesLived.length; i++) {
     }
   }
 }
-console.log('Answer 7: Sharina has lived in Massachussets, New York, California, and Minnesota');
 */
+
+var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
+var guessNum = 0;
+var correct = false;
+
+while (guessNum < 7 && correct === false){
+  
+
+  var i = 0;
+  for (i = 0; i < statesLived.length; i++){
+    var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
+    stateGuess = stateGuess.toLowerCase();
+    if (statesLived[i] === stateGuess) {
+
+      alert('Yeah! Sharina has lived in Massachussets, New York, California, and Minnesota');
+      points += 1;
+      correct = true;
+
+    } else {
+      alert('Good try, but either check your spelling or try again!');
+      guessNum += 1;
+    }
+  }
+}
+console.log('Answer 7: Sharina has lived in Massachussets, New York, California, and Minnesota');
+
+
+
 
 //Score Card
 var totalScore = document.getElementById('score');
@@ -126,7 +156,3 @@ if (points > 3) {
 } else {
   totalScore.textContent = 'Nice job' + userName + '! You guessed ' + points + maxPoints;
 }
-
-
-
-
