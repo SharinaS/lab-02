@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 var points = 0;
 
 // Request for name
@@ -19,6 +17,7 @@ if (siblings === 'yes' || siblings === 'y') {
 }
 console.log('Answer 1, var siblings, Yes, Sharina has siblings');
 
+
 // Question 2: Space Needle
 var spaceNeedle = prompt('Do you think Sharina visited the top of the Space Needle?');
 spaceNeedle = spaceNeedle.toLowerCase();
@@ -30,6 +29,7 @@ if (spaceNeedle === 'no' || spaceNeedle === 'n') {
 }
 console.log('Answer 2, var spaceNeedle, No, Sharina has not visited the top of the Space Needle.');
 
+
 // Question 3: Australia
 var visitAustralia = prompt('Would you guess that Sharina has been to Australia?');
 visitAustralia = visitAustralia.toLowerCase();
@@ -40,6 +40,7 @@ if (visitAustralia === 'yes' || visitAustralia === 'y') {
   alert('Sorry, that\'s not correct. Sharina actually has been to Australia!');
 }
 console.log('Answer 3, var visitAustralia, Yes, Sharina has been to Australia');
+
 
 // Question 4: Music Major
 var musicMajor = prompt('Do you think Sharina was a music major in undergrad?');
@@ -119,28 +120,30 @@ for (i = 0; i < statesLived.length; i++) {
 
 var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
 var guessNum = 0;
-var correct = false;
+var okToRun = true;
 
-while (guessNum < 7 && correct === false){
-  
+// while the user is still guessing, up to 6 guesses, keep comparing answer against array
+while (guessNum < 7 && okToRun === true){
 
   var i = 0;
-  for (i = 0; i < statesLived.length; i++){
+  // iterate through the array of length 8. 
+  for (i = 0; i < statesLived.length; i++){  
+    // user's guess of a state
     var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
     stateGuess = stateGuess.toLowerCase();
+    // compare the user's guess to the array  -- 0 index
     if (statesLived[i] === stateGuess) {
-
-      alert('Yeah! Sharina has lived in Massachussets, New York, California, and Minnesota');
+      alert('Yes! Sharina has lived in Massachussets, New York, California, and Minnesota');
       points += 1;
-      correct = true;
-
+      okToRun = false;
+      break;
     } else {
       alert('Good try, but either check your spelling or try again!');
       guessNum += 1;
     }
   }
 }
-console.log('Answer 7: Sharina has lived in Massachussets, New York, California, and Minnesota');
+console.log('Answer 7, var stateGuess, Sharina has lived in Massachussets, New York, California, and Minnesota');
 
 
 

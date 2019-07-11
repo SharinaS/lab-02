@@ -57,14 +57,17 @@ article {
 
 .hobbies{
     padding: 10%;
-
 }
 
 .bucket-list{
     padding: 10%;
-    
-    
+}
 
-    
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
 }
 
