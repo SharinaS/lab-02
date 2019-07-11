@@ -3,8 +3,10 @@
 var points = 0;
 
 // Request for name
-var userName = prompt('What is your first name?');
-alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
+function nameRequest() {
+  var userName = prompt('What is your first name?');
+  alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
+}
 
 
 // Question 1: Siblings
@@ -110,50 +112,56 @@ function sailingTimes() {
 }
 
 // Question 7: Discover one of several places I've lived in.
-var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
-var guessNum = 0;
-var correct = false;
+function homeStates() {
+  var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
+  var guessNum = 0;
+  var correct = false;
 
-while (guessNum < 6 && correct === false) {
+  while (guessNum < 6 && correct === false) {
 
-  var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
-  stateGuess = stateGuess.toLowerCase();
+    var stateGuess = prompt('Can you name a state Sharina has lived in, besides Washington?');
+    stateGuess = stateGuess.toLowerCase();
 
-  for (var i = 0; i < statesLived.length; i++) {
-    if (statesLived[i] === stateGuess) {
-      console.log('I am in the correct answer if statment with ' + statesLived[i]);
-      alert('Yes! Sharina has lived in Massachussets, New York, California, and Minnesota');
-      points += 1;
-      correct = true;
+    for (var i = 0; i < statesLived.length; i++) {
+      if (statesLived[i] === stateGuess) {
+        console.log('I am in the correct answer if statment with ' + statesLived[i]);
+        alert('Yes! Sharina has lived in Massachussets, New York, California, and Minnesota');
+        points += 1;
+        correct = true;
 
+      }
+    }
+
+    if (correct === false) {
+      console.log('I am in the incorrect or else statement with ' + statesLived[i]);
+      alert('Good try, but either check your spelling or try again!');
+      guessNum += 1;
     }
   }
+}
 
-  if (correct === false) {
-    console.log('I am in the incorrect or else statement with ' + statesLived[i]);
-    alert('Good try, but either check your spelling or try again!');
-    guessNum += 1;
+//Score Card
+function scoreCard() {
+  alert('Go check your score on the main page!');
+
+  var totalScore = document.getElementById('score');
+  var maxPoints = ' out of 7 questions correctly!';
+
+  if (points > 3) {
+    totalScore.textContent = 'You\'re a Rock Star, ' + userName + '! You guessed ' + points + maxPoints;
+  } else if (points < 2) {
+    totalScore.textContent = 'It was a valiant try, ' + userName + '. You guessed ' + points + maxPoints;
+  } else {
+    totalScore.textContent = 'Nice job' + userName + '! You guessed ' + points + maxPoints;
   }
 }
 
-
-//Score Card
-alert('Go check your score on the main page!');
-
-var totalScore = document.getElementById('score');
-var maxPoints = ' out of 7 questions correctly!';
-
-if (points > 3) {
-  totalScore.textContent = 'You\'re a Rock Star, ' + userName + '! You guessed ' + points + maxPoints;
-} else if (points < 2) {
-  totalScore.textContent = 'It was a valiant try, ' + userName + '. You guessed ' + points + maxPoints;
-} else {
-  totalScore.textContent = 'Nice job' + userName + '! You guessed ' + points + maxPoints;
-}
-
+nameRequest();
 siblingQuestion();
 spaceNeedleQuestion();
 australiaQuestion();
 collegeDegree();
 caribbeanQuestion();
 sailingTimes();
+homeStates();
+scoreCard();
