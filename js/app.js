@@ -1,10 +1,11 @@
 'use strict';
 
 var points = 0;
+var userName;
 
 // Request for name
 function nameRequest() {
-  var userName = prompt('What is your first name?');
+  userName = prompt('What is your first name?');
   alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
 }
 
