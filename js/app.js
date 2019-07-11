@@ -70,41 +70,44 @@ function collegeDegree() {
 
 
 // Question 5: Caribbean Life
-var caribbean = prompt('Do you think Sharina has lived in the Caribbean?');
-caribbean = caribbean.toLowerCase();
-if (caribbean === 'yes' || caribbean === 'y') {
-  alert('Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!');
-  points++;
-  console.log('Answer 5, var caribbean, Yes, Sharina lived in the Caribbean ' + caribbean);
-} else {
-  alert('Oh sad, you missed that one. Sharina did call the Caribbean home for a while.');
-  console.log('user guessed incorrectly', caribbean);
+function caribbeanQuestion() {
+  var caribbean = prompt('Do you think Sharina has lived in the Caribbean?');
+  caribbean = caribbean.toLowerCase();
+  if (caribbean === 'yes' || caribbean === 'y') {
+    alert('Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!');
+    points++;
+    console.log('Answer 5, var caribbean, Yes, Sharina lived in the Caribbean ' + caribbean);
+  } else {
+    alert('Oh sad, you missed that one. Sharina did call the Caribbean home for a while.');
+    console.log('user guessed incorrectly', caribbean);
+  }
 }
 
 
 // Question 6: Sailing to Hawaii with numeric input with 4 tries
-var responseAttempts = 0;
+function sailingTimes() {
+  var responseAttempts = 0;
 
-while (responseAttempts < 4) {
-  var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 4 guesses!'));
+  while (responseAttempts < 4) {
+    var hawaiiSailing = parseInt(prompt('How many times do you suppose Sharina has sailed from Canada to Hawaii? You have 4 guesses!'));
 
-  if (hawaiiSailing === 2) {
-    alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
-    points++;
-    break;
-  } else if (hawaiiSailing < 2) {
-    alert('Try a little higher');
-    responseAttempts++;
-  } else if (hawaiiSailing > 2) {
-    alert('Try a little lower');
-    responseAttempts++;
-  } else {
-    alert('Please re-try with a number.');
+    if (hawaiiSailing === 2) {
+      alert('Twice is correct! She was sailed from Victoria BC to Maui in 2012 and 2014.');
+      points++;
+      break;
+    } else if (hawaiiSailing < 2) {
+      alert('Try a little higher');
+      responseAttempts++;
+    } else if (hawaiiSailing > 2) {
+      alert('Try a little lower');
+      responseAttempts++;
+    } else {
+      alert('Please re-try with a number.');
+    }
   }
+  console.log('Answer 6, var hawaiiSailing, Sharina sailed from Canada to Hawaii twice');
+
 }
-console.log('Answer 6, var hawaiiSailing, Sharina sailed from Canada to Hawaii twice');
-
-
 
 // Question 7: Discover one of several places I've lived in.
 var statesLived = ['massachussets', 'ma', 'new york', 'ny', 'california', 'ca', 'minnesota', 'mn'];
@@ -152,3 +155,5 @@ siblingQuestion();
 spaceNeedleQuestion();
 australiaQuestion();
 collegeDegree();
+caribbeanQuestion();
+sailingTimes();
