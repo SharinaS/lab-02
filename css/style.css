@@ -37,7 +37,7 @@ article {
 
 #score {
     text-align: center;
-    margin: 8em;
+    margin: 5em;
     padding: 50px;
     color: goldenrod;
     background-color: rgb(0, 41, 51);
@@ -46,7 +46,7 @@ article {
 }
 
 #can-you-guess {
-    padding: 4em;
+    padding: 3em;
 }
 
 .game-section {
@@ -92,4 +92,12 @@ ul {
 ol {
     list-style-type: decimal;
 }
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+  }
 
