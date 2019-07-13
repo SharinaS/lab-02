@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 var points = 0;
 var userName;
 
@@ -9,8 +10,9 @@ function nameRequest() {
   alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
 }
 
-var questions = ['Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
 
+// Questions 1-5: siblings, space needle, australia, major in college, caribbean
+var questions = ['Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
 
 var yesResponses = ['Oooh, that\'s correct! Sharina has a sister!', 'Weirdly enough, Sharina has actual never been to the top of the Space Needle. Keep trying!', 'Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!', 'Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music', 'Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!'];
 
@@ -110,3 +112,5 @@ findAnswers();
 sailingTimes();
 homeStates();
 scoreCard();
+
+*/
