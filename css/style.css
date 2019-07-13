@@ -37,7 +37,7 @@ article {
 
 #score {
     text-align: center;
-    margin: 50px;
+    margin: 8em;
     padding: 50px;
     color: goldenrod;
     background-color: rgb(0, 41, 51);
@@ -45,9 +45,33 @@ article {
 
 }
 
+#can-you-guess {
+    padding: 4em;
+}
+
 .game-section {
     margin: auto;
     width: 40%;
+}
+
+.history-answers {
+    background: rgb(14, 112, 148);
+    margin: auto;
+
+}
+
+#try-game {
+    display: block;
+    font-weight: bold;
+    line-height: 3em;
+}
+
+#history {
+    color: whitesmoke;
+    font-size: 1.25em;
+    width: 80%;
+    margin: auto;
+    padding: 5em;
 }
 
 .moreAbout {
@@ -55,12 +79,10 @@ article {
     color: whitesmoke;
 }
 
-.hobbies{
+.hobbies, .bucket-list {
     padding: 10%;
-}
-
-.bucket-list{
-    padding: 10%;
+    float: left;
+    line-height: 4em;
 }
 
 ul {
