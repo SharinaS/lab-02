@@ -13,7 +13,7 @@ h1, h2 {
 
 h1 {
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     word-spacing: 5px;
     text-shadow: 2px 2px gold;
 }
@@ -69,6 +69,7 @@ article {
 #history {
     color: whitesmoke;
     font-size: 1.25em;
+    line-height: 2em;
     width: 80%;
     margin: auto;
     padding: 5em;

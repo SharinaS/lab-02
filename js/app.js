@@ -12,7 +12,6 @@ function runQuizFromButton() {
     alert('Hi, ' + userName + '! Let\'s see what you can guess about Sharina!');
   }
 
-
   // Questions 1-5: siblings, space needle, australia, major in college, caribbean
   var questions = ['Do you think Sharina has siblings?', 'Do you think Sharina visited the top of the Space Needle?', 'Would you guess that Sharina has been to Australia?', 'Do you think Sharina was a music major in undergrad?', 'Do you think Sharina has lived in the Caribbean?'];
   var yesResponses = ['Oooh, that\'s correct! Sharina has a sister!', 'Weirdly enough, Sharina has actual never been to the top of the Space Needle. Keep trying!', 'Yes, is the correct answer! Sharina has been to Sydney, Australia... twice!', 'Yes is correct! Sharina played string bass, was a composer, and ended up majoring in music', 'Hey, good guessing skills! Sharina lived on an island that was 5 square miles, near St. Martin!'];
@@ -104,8 +103,20 @@ function runQuizFromButton() {
     } else if (points < 2) {
       totalScore.textContent = 'It was a valiant try, ' + userName + '. You guessed ' + points + maxPoints;
     } else {
-      totalScore.textContent = 'Nice job' + userName + '! You guessed ' + points + maxPoints;
+      totalScore.textContent = 'Nice job ' + userName + '! You guessed ' + points + maxPoints;
     }
+  }
+
+  // History updates from ESAR facts to Informal Background
+  function changeHistory() {
+    var newHistory = document.getElementById('history');
+    newHistory.textContent = 'I grew up a country kid, with one younger sister, dogs, cats and horses. I graduated college with a BA in music, headed to the Caribbean for a while for medical school, then found myself in the Seattle area to finish a doctorate in Naturopathic Medicine. Seattle is now home, though I\'ve lived in California, Massachussets, New York and Minnesota. When I\m not working or studying software development, I travel or crew on sailboats with my husband. Most recently I was in New Zealand, with a quick trip to Sydney (my second time there).';
+  }
+
+  // Game Time on first page updates to Play Again
+  function playGame() {
+    var playAgain = document.getElementById('play-game');
+    playAgain.textContent = 'Would you like to play again?';
   }
 
   nameRequest();
@@ -113,4 +124,6 @@ function runQuizFromButton() {
   sailingTimes();
   homeStates();
   scoreCard();
+  changeHistory();
+  playGame();
 }
